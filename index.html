@@ -218,7 +218,6 @@
                 let imageClass = 'vivo';
                 let soundFile = 'vivo.mp3';  // Suono di default (vivo)
                 
-                // Suono di "morto" se il personaggio è deceduto
                 if (match) {
                     const parenthesisContent = match[1];
                     const cleanText = parenthesisContent.replace(/[^a-zA-Z0-9\s,–]/g, '').trim();
@@ -233,9 +232,8 @@
                     }
                 }
 
-                // Riproduci il suono
-                const audio = new Audio(soundFile); // Carica il file audio
-                audio.play(); // Riproduci il suono
+                const audio = new Audio(soundFile); 
+                audio.play(); 
 
                 let imageHtml = '';
                 if (pageImage) {
